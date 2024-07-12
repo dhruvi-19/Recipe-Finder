@@ -96,11 +96,6 @@ function displayRecipes(recipesToShow) {
     const recipeList = document.getElementById('recipeList');
     recipeList.innerHTML = '';
 
-    if (recipesToShow.length === 0) {
-        recipeList.innerHTML = '<p>No recipes found. Please search by an ingredient.</p>';
-        return;
-    }
-
     recipesToShow.forEach(recipe => {
         const recipeCard = document.createElement('div');
         recipeCard.classList.add('recipe-card');
@@ -144,4 +139,4 @@ document.querySelector('.close').addEventListener('click', () =>{
  document.getElementById('recipeModal').style.display = 'none';
 });
 
-displayRecipes();
+displayRecipes(recipes);
