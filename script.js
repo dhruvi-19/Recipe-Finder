@@ -103,7 +103,8 @@ function displayRecipes(recipesToShow) {
         recipeCard.innerHTML = `
             <img src="${recipe.image}" alt="${recipe.title}">
             <h3>${recipe.title}</h3>
-            <p>${recipe.ingredients.join(', ')}</p>
+            <p><b>Ingredients</b><br>${recipe.ingredients.join(', ')}</p>
+            <p><b>Instructions</b><br>${recipe.instructions}</p>
         `;
 
         recipeCard.addEventListener('click', () => {
